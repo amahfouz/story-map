@@ -1,3 +1,11 @@
 <h1>
   {{title}}
 </h1>
+
+<ul>
+	<li *ngFor="let cat of categories">
+	   {{cat.title}}
+	</li>
+</ul>
+
+<app-category></app-category>
