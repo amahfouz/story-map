@@ -2,20 +2,19 @@ import { Injectable, OnInit } from '@angular/core';
 
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
-import { CategoryHttpService } from './category-http.service';
-import { Category } from './category';
-
+import { EpicHttpService } from './epic-http.service';
+import { Epic } from './epic';
 
 @Injectable()
-export class CategoryService {
+export class EpicService {
 
-  private categories = new BehaviorSubject<Category[]>([]);
+  private epics = new BehaviorSubject<Epic[]>([]);
   private isFetching: boolean;
 
-  constructor(private catHttpService: CategoryHttpService) {}
+  constructor(private epicHttpService: EpicHttpService) { }
 
-  getCategories() {
-    return this.categories.asObservable();
+    getCategories() {
+    return this.epics.asObservable();
   }
 
   init() {
@@ -30,16 +29,17 @@ export class CategoryService {
 
     this.isFetching = true;
 
-    this.catHttpService.getCategories().then(
+    this.epicHttpService.getEpics().then(
       data => {
         this.isFetching = false;
         console.log('Success: ' + data);
-        this.categories.next(data);
+        this.epics.next(data);
       },
       err => {
         this.isFetching = false;
         console.log('Fail: ' + err);
-        this.categories.error(err);
+        this.epics.error(err);
       });
   }
+
 }
