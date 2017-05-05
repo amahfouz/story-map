@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from './model/Category';
+
 import { CategoryService } from './model/category.service';
+import { EpicService } from './model/epic.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,12 @@ import { CategoryService } from './model/category.service';
 })
 
 export class AppComponent implements OnInit {
-  title = 'app works!';
-  categories: Category[] = [];
 
-  constructor(private catService: CategoryService) {}
+  constructor(private catService: CategoryService,
+              private epicService: EpicService) {}
 
   ngOnInit(): void {
-    console.log('OnInit');
-    this.catService.getCategories()
-      .then(cats => this.categories = cats);
+    this.catService.init();
+    this.epicService.init();
   }
 }

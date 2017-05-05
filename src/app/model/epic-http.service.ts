@@ -22,7 +22,6 @@ export class EpicHttpService {
   }
 
   private handleSuccess(response: any): Epic[] {
-    console.log('Promise response:' + JSON.stringify(response.json().data));
     return response.json().data as Epic[];
   }
 

@@ -14,6 +14,10 @@ export class TopLaneComponent implements OnInit {
 
   constructor(private catService: CategoryService) {}
 
+  onAdd(categoryId: number) {
+    console.log(categoryId);
+  }
+
   ngOnInit() {
     this.catService.getCategories().subscribe(data => this.categories = data);
   }

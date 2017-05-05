@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+}
+
+li {
+    float: left;
+    margin: 0px;    
+}
+
+.wrapper {
+	display: -ms-flex; 
+	display: -webkit-flex; 
+	display: flex;
+}
+
+.cat-box {
+	margin-right: 5px;
+}
+
+.vertical-separator {
+    width: 0px;
+    border-left: 1px dashed #ccc;
+    margin-right: 5px;
+    flex:1;
+}
+

@@ -1,6 +1,7 @@
-
+                
 <ul>
     <li *ngFor="let cat of categories">
-       <app-category [category]='cat'></app-category>
+       <app-category [category]='cat'
+                     (add)="onAdd(cat.id)"></app-category>
     </li>
 </ul>

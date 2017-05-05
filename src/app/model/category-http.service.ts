@@ -14,15 +14,17 @@ export class CategoryHttpService {
   constructor(private http: Http) {}
 
   getCategories(): Promise<Category[]> {
-    console.log('getCategories()');
     return this.http.get(this.catUrl)
                .toPromise()
                .then(this.handleSuccess)
                .catch(this.handleError);
   }
 
+  create(prevCatId: number): Promise<any> {
+    return this.http.post('{}', {headers: this.headers}).toPromise();
+  }
+
   private handleSuccess(response: any): Category[] {
-    console.log('Promise response:' + JSON.stringify(response.json().data));
     return response.json().data as Category[];
   }
 

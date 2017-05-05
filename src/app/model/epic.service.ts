@@ -13,7 +13,7 @@ export class EpicService {
 
   constructor(private epicHttpService: EpicHttpService) { }
 
-    getCategories() {
+    getEpics() {
     return this.epics.asObservable();
   }
 
@@ -32,7 +32,6 @@ export class EpicService {
     this.epicHttpService.getEpics().then(
       data => {
         this.isFetching = false;
-        console.log('Success: ' + data);
         this.epics.next(data);
       },
       err => {

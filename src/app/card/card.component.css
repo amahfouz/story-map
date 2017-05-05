@@ -1,6 +1,47 @@
 .card {
-	border: 2px solid;
-	padding: 4px;
-	height: 120px;
-	width: 195px;
+	padding: 12px;
+	margin: 5px;
+	height: 80px;
+	width: 120px;
+	color: white;
+	box-shadow: 3px 3px 3px grey;
+	font: 12px arial, sans-serif;
+	position: relative;
+}
+
+a {
+	border: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display : table-row;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;	
+    color: #eee;
+}
+
+a:hover {
+	background-color: Transparent;
+	color: white;
+}
+
+a:active {
+    background-color: Transparent;
+    color: yellow;
+    border: none;
+}
+
+a:highlight {
+    background-color: Transparent;
+    color: yellow;
+    border: none;
+}
+
+a:focus {
+    background-color: Transparent;
+    color: yellow;
+    border: none;
 }

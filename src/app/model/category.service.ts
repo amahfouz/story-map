@@ -18,12 +18,15 @@ export class CategoryService {
     return this.categories.asObservable();
   }
 
+  addAfter(cat: Category) {
+    this.catHttpService.create(cat.id).then(() => this.fetch());
+  }
+
   init() {
     this.fetch();
   }
 
   private fetch() {
-    console.log('Fetching');
     if (this.isFetching) {
       return;
     }
@@ -33,7 +36,6 @@ export class CategoryService {
     this.catHttpService.getCategories().then(
       data => {
         this.isFetching = false;
-        console.log('Success: ' + data);
         this.categories.next(data);
       },
       err => {

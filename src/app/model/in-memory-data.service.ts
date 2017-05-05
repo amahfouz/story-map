@@ -3,13 +3,13 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     console.log('createDb()');
     const CATEGORIES = [
-        { id: 1, title: 'Dashboard' },
-        { id: 2, title: 'Chart' }
-      ];
+      { id: 101, title: 'Dashboard' },
+      { id: 102, title: 'Chart' }
+    ];
     const EPICS = [
-      {},
-      {},
-      {}
+      { categoryId: 101, id: 1001, title: 'Creation' },
+      { categoryId: 101, id: 1002, title: 'Runtime' },
+      { categoryId: 102, id: 1003, title: 'Configuration' },
     ];
 
     return {

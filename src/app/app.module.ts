@@ -8,13 +8,20 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { CategoryComponent } from './category/category.component';
+import { CategoryHttpService } from './model/category-http.service';
 import { CategoryService } from './model/category.service';
+import { EpicService } from './model/epic.service';
+import { EpicHttpService } from './model/epic-http.service';
+import { TopLaneComponent } from './top-lane/top-lane.component';
+import { EpicComponent } from './epic/epic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    CategoryComponent
+    CategoryComponent,
+    TopLaneComponent,
+    EpicComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,12 @@ import { CategoryService } from './model/category.service';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
-  providers: [ CategoryService ],
+  providers: [
+    CategoryHttpService,
+    CategoryService,
+    EpicHttpService,
+    EpicService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

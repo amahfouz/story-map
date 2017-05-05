@@ -1,4 +1,7 @@
-<div class='card'>
- Card body
+<div [ngStyle]="{'background-color': color}" class='card'>
   {{title}}
+  
+  <a class="btn btn-default" (click)="onAddPressed($event)">
+     <i class="fa fa-plus"></i>
+  </a>
 </div>
