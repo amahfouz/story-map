@@ -1,0 +1,9 @@
+<div id="wrapper">
+    <div *ngFor="let task of tasks">
+		<app-card [title]="task.title"
+		          [color]="'green'"></app-card>
+    </div>
+</div>
+
+<app-card [title]="'hey'"
+          [color]="'red'"></app-card>
