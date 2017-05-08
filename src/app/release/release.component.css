@@ -1,0 +1,43 @@
+.wrapper {
+    display: -ms-flex; 
+    display: -webkit-flex; 
+    display: flex;
+    white-space: nowrap;
+}
+
+.release {
+	display: table;
+    overflow: scroll;
+    white-space: nowrap;
+}
+
+.vert-lane {
+    display: table-cell;
+    display: -ms-flex; 
+    display: -webkit-flex; 
+    display: flex;
+}    
+ 
+.cat-area {    
+    margin-right: 5px;
+    white-space: nowrap;    
+}
+
+.epic-col {
+    overflow: scroll;
+    display: table-cell;
+    white-space: nowrap;
+}
+
+.vertical-separator {
+    width: 0px;
+    border-left: 1px dashed #ccc;
+    margin-right: 5px;
+    flex:1;
+}
+
+.horiz-sep {
+	margin-top: 5px;
+	height: 0px;
+	border-top: 3px solid #bbb;
+}
