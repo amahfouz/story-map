@@ -21,7 +21,7 @@ export class CategoryHttpService {
   }
 
   create(prevCatId: number): Promise<any> {
-    return this.http.post('{}', {headers: this.headers}).toPromise();
+    return this.http.post(this.catUrl, '{}', {headers: this.headers}).toPromise();
   }
 
   private handleSuccess(response: any): Category[] {

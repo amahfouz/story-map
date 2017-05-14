@@ -13,10 +13,18 @@ li {
 	display: -ms-flex; 
 	display: -webkit-flex; 
 	display: flex;
+	white-space: nowrap;
 }
 
 .cat-box {
 	margin-right: 5px;
+	white-space: nowrap;
+}
+
+.epic-item {
+    overflow: scroll;
+    display: table-cell;
+    white-space: nowrap;    
 }
 
 .vertical-separator {

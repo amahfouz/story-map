@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild, ElementRef, Renderer } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -12,9 +12,16 @@ export class CardComponent {
 
   @Output() add: EventEmitter<any> = new EventEmitter();
 
+  @ViewChild('textarea') input: ElementRef;
+
   onAddPressed($event) {
     this.add.emit('Add Clicked');
   }
+
+  onFocusOut() {
+    this.input.nativeElement.scrollTop = 0;
+  }
+
   constructor() { }
 
 }

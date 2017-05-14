@@ -1,7 +1,13 @@
-                
-<ul>
-    <li *ngFor="let cat of categories">
+<div id='top-lane'>
+
+    <!-- categories -->                
+    <div class="cat-item" *ngFor="let cat of categories">
        <app-category [category]='cat'
                      (add)="onAdd(cat.id)"></app-category>
-    </li>
-</ul>
+    </div>
+    
+    <!-- releases -->
+    <div class="release-lane" *ngFor="let release of releases">
+        <app-release [release]="release"></app-release>
+    </div>
+</div>

@@ -1,11 +1,10 @@
-ul {
-    list-style-type: none;
-    overflow: hidden;
-    margin: 0;
-    padding: 0
+#top-lane {
+    overflow: scroll;
+    white-space: nowrap;
 }
 
-li {
-    float: left;
-    margin: 0px;    
+.cat-item {
+    overflow: scroll;
+    display: table-cell;
+    white-space: nowrap;    
 }

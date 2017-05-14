@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Category } from '../model/Category';
+import { Release } from '../model/Release';
 import { CategoryService } from '../model/category.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { CategoryService } from '../model/category.service';
 export class TopLaneComponent implements OnInit {
 
   categories: Category[] = [];
+  releases: Release[] = [new Release()];
 
   constructor(private catService: CategoryService) {}
 

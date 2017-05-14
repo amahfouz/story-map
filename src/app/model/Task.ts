@@ -1,5 +1,6 @@
 export class Task {
+  epic: number;
   id: number;
-  title: String;
-  description: String;
+  title: string;
+  description: string;
 }

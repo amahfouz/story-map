@@ -4,11 +4,9 @@
 		          [color]='color'
 		          (add)="onAdd($event)"></app-card>
 		          
-		<ul>
-		    <li *ngFor="let epic of epics">
-		        <app-epic [epic]='epic'></app-epic>
-		    </li>
-		</ul>          
+	    <div class="epic-item" *ngFor="let epic of epics">
+	        <app-epic [epic]='epic'></app-epic>
+	    </div>
 	</div>
 	<div class="vertical-separator"></div>
 </div>

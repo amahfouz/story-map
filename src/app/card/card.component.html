@@ -1,5 +1,5 @@
 <div [ngStyle]="{'background-color': color}" class='card'>
-  {{title}}
+  <textarea #textarea (focusout)="onFocusOut()">{{title}}</textarea>
   
   <a class="btn btn-default" (click)="onAddPressed($event)">
      <i class="fa fa-plus"></i>

@@ -12,8 +12,13 @@ import { CategoryHttpService } from './model/category-http.service';
 import { CategoryService } from './model/category.service';
 import { EpicService } from './model/epic.service';
 import { EpicHttpService } from './model/epic-http.service';
+import { TaskService } from './model/task.service';
+import { TaskHttpService } from './model/task-http.service';
 import { TopLaneComponent } from './top-lane/top-lane.component';
 import { EpicComponent } from './epic/epic.component';
+import { SortCategoryPipe } from './model/sort-category.pipe';
+import { ReleaseComponent } from './release/release.component';
+import { TaskListComponent } from './task-list/task-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,10 @@ import { EpicComponent } from './epic/epic.component';
     CardComponent,
     CategoryComponent,
     TopLaneComponent,
-    EpicComponent
+    EpicComponent,
+    SortCategoryPipe,
+    ReleaseComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,9 @@ import { EpicComponent } from './epic/epic.component';
     CategoryHttpService,
     CategoryService,
     EpicHttpService,
-    EpicService
+    EpicService,
+    TaskService,
+    TaskHttpService
   ],
   bootstrap: [AppComponent]
 })
